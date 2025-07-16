@@ -7,7 +7,7 @@
 Our goal is to create a VPC in AWS using Terraform.
 
 ## Step 0 : Give user full access permission
-1. The user will need permissions to create a VPCs. Normally you will want to give granular access but in this case we will grant full access. Access the user in the IAM console and click add permission and then add permission.
+1. The user will need permissions to create a VPC. Normally you will want to give granular access but in this case we will grant full access. Access the user in the IAM console and click add permission and then add permission.
 <img width="425" height="114" alt="image" src="https://github.com/user-attachments/assets/4ec952da-4d72-4661-8200-f808d1361687" />
 
 2. Click attach policy and search for “AmazonVPCFullAccess.” Click the radio box and click next.
