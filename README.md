@@ -1,4 +1,4 @@
-<img width="442" height="43" alt="image" src="https://github.com/user-attachments/assets/a86de912-605c-46e2-8ce8-0f86eb8063f3" /><img width="870" height="149" alt="image" src="https://github.com/user-attachments/assets/7eead5e8-b15e-445c-8439-ea13855f8d33" />
+<img width="442" height="24" alt="image" src="https://github.com/user-attachments/assets/c85afbc3-9bc5-4f81-9fd6-fb04f3a5d017" /><img width="442" height="43" alt="image" src="https://github.com/user-attachments/assets/a86de912-605c-46e2-8ce8-0f86eb8063f3" /><img width="870" height="149" alt="image" src="https://github.com/user-attachments/assets/7eead5e8-b15e-445c-8439-ea13855f8d33" />
 <img width="442" height="24" alt="image" src="https://github.com/user-attachments/assets/10d1a359-973d-4efe-93b0-adc51053c3e6" /><img width="442" height="24" alt="image" src="https://github.com/user-attachments/assets/197aa308-8c9b-48f2-96e2-c9042b99cc25" />
 
 <img width="870" height="149" alt="image" src="https://github.com/user-attachments/assets/57b4b62d-0ed2-4f6c-94be-fbccb069a929" />
@@ -67,5 +67,52 @@ resource "aws_route_table_association" "PublicRTassociation"{
    ```
    terraform init
    ```
-(If you are getting an error stating [Terraform initialized in an empty directory!] do an ls command and make sure your file ends with .tf and not .tf.txt. If you need to rename the command is mv <filename>.tf.txt <filename>.tf)
-If this is the first time running Terraform it may take a few minutes to install.
+(If you are getting an error stating [Terraform initialized in an empty directory!] do an ls (that is "el" "es") command and make sure your file ends with .tf and not .tf.txt. If you need to rename the command is mv <filename>.tf.txt <filename>.tf)
+<img width="425" height="209" alt="image" src="https://github.com/user-attachments/assets/d0670748-644d-4be8-a518-d460d55d416b" />
+
+2. Next use the command below. This command will verify our code is good and let us know of any issues.
+   ```
+   terraform validate
+   ```
+<img width="425" height="82" alt="image" src="https://github.com/user-attachments/assets/5edf7428-386a-489b-a096-33dddbd267bc" />
+
+In my case I have an undeclared resource error. I will correct this and run the terraform validate command again.
+
+<img width="230" height="25" alt="image" src="https://github.com/user-attachments/assets/2135e5b0-32a1-4d4b-98ce-7588951aadd0" />
+
+3. Enter the command below. This will show us all of the resources terraform will create.
+
+   ```
+   terraform plan
+   ```
+<img width="425" height="191" alt="image" src="https://github.com/user-attachments/assets/a6ab28e5-4c3c-496c-b061-b26fab97f8f0" />
+
+4. Enter the command below to create the VPC.
+   ```
+   terraform apply -auto-approve
+   ```
+<img width="425" height="20" alt="image" src="https://github.com/user-attachments/assets/0f4700d6-4ed1-4505-b0f3-5fdaa16fe7f8" />
+
+Looking in the AWS console we see our new VPC
+
+<img width="425" height="92" alt="image" src="https://github.com/user-attachments/assets/a071cee4-877a-460b-bef5-eba934017caa" />
+
+We can see our two subnets, two routing tables, and internet gateway.
+
+<img width="425" height="106" alt="image" src="https://github.com/user-attachments/assets/2c96b2d3-a862-4b40-9311-f85a6de6fe37" />
+
+5. Clean up. Enter the command below to delete the resources we created. Enter "yes" when prompted.
+   ```
+   terraform destroy
+   ```
+<img width="425" height="89" alt="image" src="https://github.com/user-attachments/assets/a8e9d816-1afa-419e-af8c-9329b6cc3d5e" />
+
+
+
+
+
+
+
+
+
+
