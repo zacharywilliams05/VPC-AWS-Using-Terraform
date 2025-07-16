@@ -58,4 +58,14 @@ resource "aws_route_table" "PublicRT"{
 resource "aws_route_table_association" "PublicRTassociation"{
 	 subnet_id = aws_subnet.PublicSubnet.id
 	 route_table_id = aws_route_table.PublicRT.id
+}
 ```
+2. Save this code in a file and name it something like <my-terraform-code.tf> in a directory and then move to that directory in the terminal.
+
+## Step 2 : Execute your code using Terraform
+1. In the terminal enter
+   ```
+   terraform init
+   ```
+(If you are getting an error stating [Terraform initialized in an empty directory!] do an ls command and make sure your file ends with .tf and not .tf.txt. If you need to rename the command is mv <filename>.tf.txt <filename>.tf)
+If this is the first time running Terraform it may take a few minutes to install.
